@@ -49,7 +49,7 @@ namespace calculator
             {
                 //Sends to Divide method if / is chosen and 0 is not the second number
                 decimal answer = Divide(valFirst, valSecond);
-                Console.WriteLine($"{valFirst} {operation} {valSecond}  =  {answer}");
+                NumSentence(valFirst, operation, valSecond, answer);
             }
 
             //Deals with problem of dividing by zero
@@ -122,7 +122,19 @@ namespace calculator
         {
             Console.WriteLine($"{valFirst} {operation} {valSecond} = {answer}");
         }
-       
+        /// <summary>
+        /// Overloaded method that outputs the number sentence in division
+        /// </summary>
+        /// <param name="valFirst"></param>
+        /// <param name="operation"></param>
+        /// <param name="valSecond"></param>
+        /// <param name="answer"></param>
+        /// <returns>the number sentence</returns>
+        private static void NumSentence(decimal valFirst, string operation, decimal valSecond, decimal answer)
+        {
+            Console.WriteLine($"{valFirst} {operation} {valSecond} = {answer}");
+        }
+
     }
 
 }
