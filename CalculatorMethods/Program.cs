@@ -27,7 +27,7 @@ namespace calculator
                 //Sends to Add method if + is chosen
                 var answer = Add(valFirst, valSecond);
                 //Outputs the number sentence and answer using method
-               Console.WriteLine(NumSentence(valFirst, operation, valSecond, answer));
+             NumSentence(valFirst, operation, valSecond, answer);
             }
 
             else if (operation == "-")
@@ -35,14 +35,14 @@ namespace calculator
                 //Sends to Subtract method if - is chosen
                 var answer = Subtract(valFirst, valSecond);
                 //Outputs the number sentence and answer using method
-                Console.WriteLine(NumSentence(valFirst, operation, valSecond, answer));
+                NumSentence(valFirst, operation, valSecond, answer);
             }
 
             else if ((operation == "*") || (operation == "x"))
             {
                 //Sends to Multiply method if x or * is chosen
                 var answer = Multiply(valFirst, valSecond);
-                Console.WriteLine(NumSentence(valFirst, operation, valSecond, answer));
+                NumSentence(valFirst, operation, valSecond, answer);
             }
 
             else if ((operation == "/") && (valSecond != 0))
@@ -118,9 +118,9 @@ namespace calculator
         /// <param name="valSecond"></param>
         /// <param name="answer"></param>
         /// <returns>the number sentence</returns>
-        private static string NumSentence(int valFirst, string operation, int valSecond, int answer)
+        private static void NumSentence(int valFirst, string operation, int valSecond, int answer)
         {
-            return $"{valFirst} {operation} {valSecond} = {answer}";
+            Console.WriteLine($"{valFirst} {operation} {valSecond} = {answer}");
         }
        
     }
